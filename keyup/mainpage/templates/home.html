@@ -1,0 +1,179 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>키업 - 기업 분석 서비스</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+    <!-- Google fonts - Poppins-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="{% static 'vendor/lightbox2/css/lightbox.css' %}">
+    <!-- Custom font icons-->
+    <link rel="stylesheet" href="{% static 'css/fontastic.css' %}">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="{% static 'css/style.default.css" id="theme-stylesheet' %}">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+ 
+  <style>
+  </style>
+  
+  
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container"><a href="./" class="navbar-brand"><img src="{% static 'img/logologo.svg' %}" alt="" class="img-fluid"></a>
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars ml-2"></i></button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                  <!-- Link-->
+                  <li class="nav-item"> <a href="{% url 'home' %}" class="nav-link active">홈</a></li>
+            
+                  <li class="nav-item"> <a href="{% url 'result' %}" class="nav-link">분석 페이지</a></li>
+
+            </ul><a href="#" data-toggle="modal" data-target="#login" class="btn btn-primary navbar-btn ml-0 ml-lg-3">로그인</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Login Modal-->
+    <div id="login" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade bd-example-modal-lg">
+      <div role="document" class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body p-4 p-lg-5">
+            <form action="#" class="login-form text-left">
+              <div class="form-group mb-4">
+                <label>Email address</label>
+                <input type="email" name="email" placeholder="name@company.com" class="form-control">
+              </div>
+              <div class="form-group mb-4">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Min 8 characters" class="form-control">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Section-->
+    <section class="hero">
+      <div class="container mb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <br>
+            <br>
+            <h1 class="hero-heading mb-0">키업</h1>
+            <div class="row">
+              <div class="col-lg-10">
+                <p class="lead text-muted mt-4 mb-4">당신이 분석을 원하는 기업키워드를 넣어주세요</p>
+              </div>
+            </div>
+            <form action="#" class="subscription-form">
+              <div class="form-group">
+                <input type="text" name="text" placeholder="예 : KT LG SAMSUNG" class="form-control">
+                <br>
+                <button type="submit" class="btn btn-primary">분석하기</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-6"><img src="{% static 'img/illustration-hero.svg' %}" alt="..." class="hero-image img-fluid d-none d-lg-block"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Intro Section-->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mx-auto mt-5"><img src="{% static 'img/illustration-1.svg' %}" alt="..." class="intro-image img-fluid"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Divider Section-->
+
+    <!-- Integrations Section-->
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <h2>텍스트 마이닝 분석을 통해 유의미한 정보를 제공합니다</h2>
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <p class="lead text-muted mt-2">근 3년간의 데이터 축적을 통해 해당 기업의 분석을 실시</p>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+    <!-- CLients Section-->
+    <section class="bg-gray">
+      <div class="container">
+        <div class="text-center">
+          <h2><br>키업을 통해 취업 로켓을 타고 날아보자</h2>
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <p class="lead text-muted mt-2">슝슝슝~</p>
+            </div>
+          </div>
+        </div>
+        <div class="clients mt-5">
+          <div class="row">
+            <div class="col-lg-2"><img src="{% static 'img/client-1.svg' %}" alt="" class="client-image img-fluid"></div>
+            <div class="col-lg-2"><img src="{% static 'img/client-2.svg' %}" alt="" class="client-image img-fluid"></div>
+            <div class="col-lg-2"><img src="{% static 'img/client-3.svg' %}" alt="" class="client-image img-fluid"></div>
+            <div class="col-lg-2"><img src="{% static 'img/client-4.svg' %}" alt="" class="client-image img-fluid"></div>
+            <div class="col-lg-2"><img src="{% static 'img/client-5.svg' %}" alt="" class="client-image img-fluid"></div>
+            <div class="col-lg-2"><img src="{% static 'img/client-6.svg' %}" alt="" class="client-image img-fluid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section-->
+    <section class="pb-0">
+      <div class="container">
+        <div class="text-center">
+          <h2>열심히 공부한 당신</h2>
+          <p class="lead text-muted mt-2">이제 떠나라</p>
+        </div>
+        <div class="portfolio mt-5">
+          <div class="row">
+            <div class="col-lg-4 p-0"><a href="{% static 'img/portfolio-1.jpg' %}" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="{% static 'img/portfolio-1.jpg' %}" alt="image" class="img-fluid"></a></div>
+            <div class="col-lg-4 p-0"><a href="{% static 'img/portfolio-2.jpg' %}" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="{% static 'img/portfolio-2.jpg' %}" alt="image" class="img-fluid"></a></div>
+            <div class="col-lg-4 p-0"><a href="{% static 'img/portfolio-3.jpg' %}" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="{% static 'img/portfolio-3.jpg' %}" alt="image" class="img-fluid"></a></div>
+            <div class="col-lg-4 p-0"><a href="{% static 'img/portfolio-4.jpg' %}" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="{% static 'img/portfolio-4.jpg' %}" alt="image" class="img-fluid"></a></div>
+            <div class="col-lg-4 p-0"><a href="{% static 'img/portfolio-5.jpg' %}" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="{% static 'img/portfolio-5.jpg' %}" alt="image" class="img-fluid"></a></div>
+            <div class="col-lg-4 p-0"><a href="{% static 'img/portfolio-6.jpg' %}" data-lightbox="image-1" data-title="Some footer information" class="portfolio-item"><img src="{% static 'img/portfolio-6.jpg' %}" alt="image" class="img-fluid"></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Get Started Section-->
+
+
+    <!-- JavaScript files-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.cookie/jquery.cookie.js' %}"> </script>
+    <script src="{% static 'vendor/lightbox2/js/lightbox.js' %}"></script>
+    <script src="{% static 'js/front.js' %}"></script>
+  </body>
+</html>
