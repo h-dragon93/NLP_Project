@@ -10,3 +10,4 @@
   - TextRank
 - 형태소 분석기는 Mecab Eunjeon Project 사용
 
+git Lab URL : https://gitlab.com/gksdyd4238/Python_NLP_Project
