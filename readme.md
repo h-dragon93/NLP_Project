@@ -9,5 +9,5 @@
   - word Embedding
   - TextRank
 - 형태소 분석기는 Mecab Eunjeon Project 사용
-
+자세한 내용은 아래 URL 참고
 git Lab URL : https://gitlab.com/gksdyd4238/Python_NLP_Project
